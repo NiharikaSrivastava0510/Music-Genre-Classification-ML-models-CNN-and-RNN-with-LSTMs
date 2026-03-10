@@ -1,8 +1,14 @@
-# Music Genre Classification
+# COMP6252 Coursework 1 - Music Genre Classification
 
 ## 📋 Project Overview
 
 This project implements six different neural network architectures to classify music genres using the GTZAN dataset. The goal is to compare the performance of various deep learning approaches on audio classification tasks.
+
+**Module:** COMP6252  
+**Due Date:** Tuesday 28th April, 16:00  
+**Weight:** 20% of overall module mark  
+**Submission:** https://handin.ecs.soton.ac.uk/handin/2526/COMP6252/1
+
 ---
 
 ## 🎵 Dataset
@@ -159,6 +165,62 @@ COMP6252-CW1/
 # Compare performance across architectures
 ```
 
+### Step 4: Generate Report
+- Document implementation details
+- Present performance metrics
+- Discuss and compare results
+- Write reflection on deep learning topic
+
+---
+
+## 📊 Expected Deliverables
+
+### 1. Code (code.zip)
+- Single Jupyter notebook containing:
+  - Data loading and preprocessing
+  - All 6 neural network architectures (Net1-Net6)
+  - Training loops for each architecture
+  - Evaluation and comparison code
+  - Results visualization
+
+### 2. Report (report.pdf)
+**Part 1 (3 pages):**
+- Name and ECS user ID
+- Implementation description
+  - Network architectures
+  - Training procedures
+  - Hyperparameters used
+- Performance results
+  - Accuracy, loss curves
+  - Confusion matrices
+  - Comparative metrics
+- Discussion and analysis
+  - Which architectures performed best/worst?
+  - Why did certain approaches work better?
+  - Insights and observations
+
+**Part 2 (1 page):**
+- Selected deep learning topic from labs
+- Reflection covering:
+  - Importance of the topic
+  - Current technologies
+  - Personal implementation capabilities
+  - Positive/negative impacts and future vision
+
+**Format:** CVPR LaTeX template, maximum 4 A4 pages, no appendix
+
+---
+
+## 🎯 Marking Criteria
+
+**Total: 20 marks (16 + 4)**
+
+- **Task Completion:** Successful implementation of all 6 architectures
+- **Understanding:** Clear evidence of comprehension
+- **Code Quality:** Well-structured, commented, professional
+- **Report Quality:** Clear presentation, insightful analysis
+- **Professionalism:** Overall quality of implementation and reporting
+
 ---
 
 ## 📝 Implementation Tips
@@ -175,6 +237,13 @@ COMP6252-CW1/
 3. Implement early stopping based on validation loss
 4. For Architecture 6, train GAN separately first, then use for augmentation
 
+### General Best Practices
+- Use GPU if available (`model.to(device)`)
+- Implement learning rate scheduling
+- Save checkpoints regularly
+- Visualize training progress
+- Document all hyperparameters
+
 ---
 
 ## 🔗 Useful Resources
@@ -184,6 +253,26 @@ COMP6252-CW1/
 - **PyTorch Documentation:** https://pytorch.org/docs/stable/index.html
 - **Librosa Documentation:** https://librosa.org/doc/latest/index.html
 
+---
+
+## 📧 Contact
+
+For questions or issues:
+- Use Q&A channel on Teams
+- Email: Hikmat, Zhiwu, or Xiaohao
+
+---
+
+## ⚠️ Important Notes
+
+- **Late Submission:** Standard ECS penalties apply
+- **Academic Integrity:** This is individual work
+- **Submission Format:** 
+  - `report.pdf` (CVPR format, max 4 pages)
+  - `code.zip` (all code files)
+- **Deadline:** Tuesday 28th April, 16:00
+
+---
 
 ## 📈 Performance Tracking Template
 
@@ -210,3 +299,11 @@ COMP6252-CW1/
 - [ ] Implement Net6 (RNN + GAN)
 - [ ] Train all models and record results
 - [ ] Generate performance visualizations
+- [ ] Write report Part 1 (3 pages)
+- [ ] Write report Part 2 (1 page reflection)
+- [ ] Create code.zip
+- [ ] Submit to ECS Handin before deadline
+
+---
+
+**Good luck with your coursework! 🎓**
