@@ -1,15 +1,7 @@
 # COMP6252 Coursework 1 - Music Genre Classification
-
 ## 📋 Project Overview
 
 This project implements six different neural network architectures to classify music genres using the GTZAN dataset. The goal is to compare the performance of various deep learning approaches on audio classification tasks.
-
-**Module:** COMP6252  
-**Due Date:** Tuesday 28th April, 16:00  
-**Weight:** 20% of overall module mark  
-**Submission:** https://handin.ecs.soton.ac.uk/handin/2526/COMP6252/1
-
----
 
 ## 🎵 Dataset
 
@@ -89,7 +81,7 @@ This project implements six different neural network architectures to classify m
 ### Installation
 ```bash
 # Clone or download the project
-cd COMP6252-CW1
+cd Music-Genre-Classification-ML-models-CNN-and-RNN-with-LSTMs
 
 # Install required packages
 pip install torch torchvision torchaudio
@@ -104,11 +96,10 @@ pip install librosa numpy matplotlib pandas jupyter
 ## 📁 Project Structure
 
 ```
-COMP6252-CW1/
+Music-Genre-Classification-ML-models-CNN-and-RNN-with-LSTMs/
 │
 ├── README.md                   # This file
-├── notebook.ipynb              # Main Jupyter notebook with all implementations
-├── report.pdf                  # Final 4-page report (3 pages + 1 page reflection)
+├── music-genre-classification.ipynb              # Main Jupyter notebook with all implementations
 │
 ├── data/
 │   └── gtzan/                  # GTZAN dataset
@@ -128,7 +119,7 @@ COMP6252-CW1/
 │   ├── confusion_matrices/
 │   └── performance_metrics.csv
 │
-└── code.zip                    # Zipped code for submission
+
 ```
 
 ---
@@ -165,84 +156,22 @@ COMP6252-CW1/
 # Compare performance across architectures
 ```
 
-### Step 4: Generate Report
-- Document implementation details
-- Present performance metrics
-- Discuss and compare results
-- Write reflection on deep learning topic
+
 
 ---
+###  Architectures 1-4 (Image-based)
+1. Used `torchvision.transforms.Resize(180)` for image preprocessing
+2. Used `torch.utils.data.random_split()` for dataset splitting
+3. Monitored both training and validation loss/accuracy
+4. Saved models with best validation performance
 
-## 📊 Expected Deliverables
+###  Architectures 5-6 (Audio-based)
+1. Used librosa for audio feature extraction
+2. Considered using MFCC features or raw waveforms
+3. Implemented early stopping based on validation loss
+4. For Architecture 6, trained GAN separately first, then used for augmentation
 
-### 1. Code (code.zip)
-- Single Jupyter notebook containing:
-  - Data loading and preprocessing
-  - All 6 neural network architectures (Net1-Net6)
-  - Training loops for each architecture
-  - Evaluation and comparison code
-  - Results visualization
 
-### 2. Report (report.pdf)
-**Part 1 (3 pages):**
-- Name and ECS user ID
-- Implementation description
-  - Network architectures
-  - Training procedures
-  - Hyperparameters used
-- Performance results
-  - Accuracy, loss curves
-  - Confusion matrices
-  - Comparative metrics
-- Discussion and analysis
-  - Which architectures performed best/worst?
-  - Why did certain approaches work better?
-  - Insights and observations
-
-**Part 2 (1 page):**
-- Selected deep learning topic from labs
-- Reflection covering:
-  - Importance of the topic
-  - Current technologies
-  - Personal implementation capabilities
-  - Positive/negative impacts and future vision
-
-**Format:** CVPR LaTeX template, maximum 4 A4 pages, no appendix
-
----
-
-## 🎯 Marking Criteria
-
-**Total: 20 marks (16 + 4)**
-
-- **Task Completion:** Successful implementation of all 6 architectures
-- **Understanding:** Clear evidence of comprehension
-- **Code Quality:** Well-structured, commented, professional
-- **Report Quality:** Clear presentation, insightful analysis
-- **Professionalism:** Overall quality of implementation and reporting
-
----
-
-## 📝 Implementation Tips
-
-### For Architectures 1-4 (Image-based)
-1. Use `torchvision.transforms.Resize(180)` for image preprocessing
-2. Use `torch.utils.data.random_split()` for dataset splitting
-3. Monitor both training and validation loss/accuracy
-4. Save models with best validation performance
-
-### For Architectures 5-6 (Audio-based)
-1. Use librosa for audio feature extraction
-2. Consider using MFCC features or raw waveforms
-3. Implement early stopping based on validation loss
-4. For Architecture 6, train GAN separately first, then use for augmentation
-
-### General Best Practices
-- Use GPU if available (`model.to(device)`)
-- Implement learning rate scheduling
-- Save checkpoints regularly
-- Visualize training progress
-- Document all hyperparameters
 
 ---
 
@@ -252,25 +181,6 @@ COMP6252-CW1/
 - **Jupyter Notebook Docs:** https://docs.jupyter.org/en/latest/
 - **PyTorch Documentation:** https://pytorch.org/docs/stable/index.html
 - **Librosa Documentation:** https://librosa.org/doc/latest/index.html
-
----
-
-## 📧 Contact
-
-For questions or issues:
-- Use Q&A channel on Teams
-- Email: Hikmat, Zhiwu, or Xiaohao
-
----
-
-## ⚠️ Important Notes
-
-- **Late Submission:** Standard ECS penalties apply
-- **Academic Integrity:** This is individual work
-- **Submission Format:** 
-  - `report.pdf` (CVPR format, max 4 pages)
-  - `code.zip` (all code files)
-- **Deadline:** Tuesday 28th April, 16:00
 
 ---
 
@@ -299,11 +209,5 @@ For questions or issues:
 - [ ] Implement Net6 (RNN + GAN)
 - [ ] Train all models and record results
 - [ ] Generate performance visualizations
-- [ ] Write report Part 1 (3 pages)
-- [ ] Write report Part 2 (1 page reflection)
-- [ ] Create code.zip
-- [ ] Submit to ECS Handin before deadline
 
----
 
-**Good luck with your coursework! 🎓**
