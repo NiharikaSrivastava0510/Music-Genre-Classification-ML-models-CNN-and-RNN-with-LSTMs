@@ -1,4 +1,4 @@
-# COMP6252 Coursework 1 - Music Genre Classification
+# Music Genre Classification
 ## 📋 Project Overview
 
 This project implements six different neural network architectures to classify music genres using the GTZAN dataset. The goal is to compare the performance of various deep learning approaches on audio classification tasks.
